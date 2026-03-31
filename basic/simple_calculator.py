@@ -3,9 +3,13 @@
 # tuir mai ita sei uza function input() mak hanesan built-in fuction(funsaun ne'ebe iha nanis ona wainhira ita utiliza python) ne'ebe ita bele prense buat ruma ho manual
 
 def calcula():
-    a = int(input("input numeru 1: ")) # ita uza int() atu nune'e bele input numeru integer laos string, karik ita la uza int numeru ne'ebe ita prense sei sai string automatikamente
-    b = int(input("input numeru 2: "))
-    operasaun = input("hili operasaun(+, -, *, /): ")
+    try:
+        a = int(input("input numeru 1: ")) # ita uza int() atu nune'e bele input numeru integer laos string, karik ita la uza int numeru ne'ebe ita prense sei sai string automatikamente
+        b = int(input("input numeru 2: "))
+        operasaun = input("hili operasaun(+, -, *, /): ")
+    except ValueError:
+        print("ne'eba laos numeru")
+        return
 
 
     def mais(a, b):
@@ -32,13 +36,16 @@ def calcula():
         menuss = menus(a, b)
         print("resustado: ", menuss)
 
-    elif operasaun == "-":
+    elif operasaun == "*":
         vezess = vezes(a, b)
         print("resustado: ", vezess)
 
-    else:
-        dividirr = dividir(a, b)
-        print("resultado: ", dividirr)
+    elif operasaun == "/":
+        try:
+            dividirr = dividir(a, b)
+            print("resultado: ", dividirr)
+        except ZeroDivisionError:
+            print("numeru saida deit labele dividi ba 0!")
 
 calcula()
 
