@@ -170,3 +170,19 @@ except ValueError:
 
 
 # level2
+# update calculator aumenta try no except no hau aumenta tiha ona bele cek iha simple calculator
+
+
+# level3
+celcius = float(input("Input temperatura (°C): "))
+
+try:
+    fahrenheight = (celcius * 9/5) + 32
+    print(f"{celcius}°C = {fahrenheight}°F")
+except:
+    print("favor input numeru lolos labele karater!")
+else:
+    print(f"susesu! No fahrenheight mak: {fahrenheight}")
+
+finally:
+    print("Programa Remata!")
