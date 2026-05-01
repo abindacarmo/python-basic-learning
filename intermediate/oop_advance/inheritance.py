@@ -33,10 +33,14 @@ print("=========utiliza super()===========")
 
 class Busa(Animal): # ita kria sub class ida no extend husi super class
     def __init__(self, naran, rasa):
-        super().__init__(naran)
-        self.rasa = rasa
+        super().__init__(naran) # super() signifika ita bele bolu variable husi parent mai iha child class sira, 
+        self.rasa = rasa        # exemplo super() dehan: "bolu uluk parent nian mak bolu hau nian"
+    
 
 busa = Busa("muti", "Mutin")
-print(busa.naran)
+print(busa.naran) # wainhira ita bolu deit variable entaun la presiza uza () ex: los: busa.naran, sala: busa.naran(), so ita bolu funsaun mak ita ble aumenta () hanesan asu.han(), tamba han ne'e function/method ida iha class ida nia laran
 print(busa.rasa)
+
+
+
 
